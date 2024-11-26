@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(230, 225, 219);
+}
+
+.ItemDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: #e9e0e0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.descripcion {
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.precio {
+    margin-bottom: 10px;
+    color: #e67e22;
+}
+
+.categoria {
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addToCartButton {
+    background-color: #3498db;
+    color: white;
+    margin-right: 10px;
+}
+
+.addToCartButton:hover {
+    background-color: #2980b9;
+}
+
+.checkoutButton {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.checkoutButton:hover {
+    background-color: #27ae60;
+}
+
+/* Media query para pantallas de ancho máximo de 400px */
+@media (max-width: 400px) {
+    .ItemDetail {
+        padding: 20px 10px;
+    }
+
+    .buttonContainer {
+        flex-direction: column; /* Botones en columna */
+        align-items: center;    /* Centrar horizontalmente */
+        justify-content: center; /* Centrar verticalmente */
+        width: 15px;
+                    /* Ajustar automáticamente al contenido */
+        text-align: center;     /* Centrar texto dentro del contenedor */
+    }
+    
+    button {
+        font-size: 0.9em; /* Reducir el tamaño del texto */
+        padding: 8px 15px; /* Reducir el tamaño del botón */
+        margin-bottom: 10px; /* Separación entre botones */
+    }
+    .addToCartButton {
+        font-weight: 10px;
+    }
+
+    
+
+    .descripcion {
+        font-size: 1em; /* Reducir el tamaño del texto */
+    }
+
+    .cantidad-texto {
+        font-size: 0.9em; /* Reducir el texto de cantidad */
+    }
+}

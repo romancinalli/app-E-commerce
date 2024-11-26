@@ -1,0 +1,113 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(117, 161, 179);
+    height: 100px;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    border-radius: 35px;
+}
+
+.cart-icon {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.categoryItems {
+    color: beige;
+    padding-right: 10px;
+    text-decoration: none; 
+}
+
+h5 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    color: beige;
+    
+}
+
+.cart-widget {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    width: 30px;
+    height: auto;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.sideMenu {
+    list-style: none;
+    padding: 20px;
+    position: fixed;
+    top: 60px; /* Ajusta según la altura de tu navbar */
+    left: 0;
+    background-color: rgb(190, 180, 180); /* Fondo sólido */
+    width: 250px;
+    height: calc(100% - 60px); /* Ajusta según la altura de tu navbar */
+    transform: translateX(-100%); /* Oculto por defecto */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave */
+    opacity: 0.9; /* Mayor visibilidad */
+    z-index: 100; /* Asegura que el menú esté encima */
+}
+
+.sideMenu.show {
+    transform: translateX(0); /* Mostrar el menú */
+}
+
+.sideMenu li {
+    margin: 15px 0;
+    background-color: darkslategrey;
+    cursor: pointer;
+}
+
+.sideMenu li:hover {
+    text-decoration: underline;
+}
+.productos-button{
+    background-color: rgb(197, 192, 192) ;
+    border: 1px, white;
+    display: flex;
+    align-items: center;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .logo {
+        width: 80px; /* Reduce el tamaño del logo en dispositivos móviles */
+    }
+
+    .categoryItems {
+        font-size: 14px; /* Reduce el tamaño del texto de los items */
+    }
+
+    .navbar {
+        height: 80px; /* Reduce la altura de la navbar en dispositivos móviles */
+    }
+    .productos-button{
+        width: 100px;
+        padding: 5px;
+        font-size: 12px;
+    }
+}
