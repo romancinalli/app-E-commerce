@@ -4,6 +4,7 @@
     background-color: rgb(117, 161, 179);
     height: 100px;
     align-items: center;
+    
 }
 
 .logo {
@@ -85,12 +86,33 @@ h5 {
 .sideMenu li:hover {
     text-decoration: underline;
 }
-.productos-button{
-    background-color: rgb(197, 192, 192) ;
-    border: 1px, white;
-    display: flex;
-    align-items: center;
+.productos-button {
+    background-color: #f4f4f4; /* Color claro con contraste */
+    border: 2px solid #ccc; /* Borde visible */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #333; /* Texto en color oscuro */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 12px; /* Tamaño del texto */
+    font-weight: bold; /* Texto más llamativo */
+    text-align: center; /* Centrado del texto */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: all 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
+    margin: 0;
 }
+
+.productos-button:hover {
+    background-color: #e0e0e0; /* Cambio de color al pasar el cursor */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más fuerte */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.productos-button:active {
+    background-color: #d6d6d6; /* Color al hacer clic */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+    transform: translateY(0); /* Efecto de presión */
+}
+
 
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
@@ -108,6 +130,6 @@ h5 {
     .productos-button{
         width: 100px;
         padding: 5px;
-        font-size: 12px;
+        font-size: 10px;
     }
 }

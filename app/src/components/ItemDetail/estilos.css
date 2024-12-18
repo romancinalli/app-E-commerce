@@ -24,7 +24,7 @@ h2 {
     margin-bottom: 20px;
     color: #666;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 15px;
 }
 
 .precio {
@@ -34,26 +34,49 @@ h2 {
 
 .categoria {
     margin-bottom: 20px;
-    font-size: 0.9em;
+    font-size: 18px;
     color: #888;
 }
 
 .buttonContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 20px;
+    border: 2px solid #ccc; /* Añade el borde alrededor del contenedor */
+    padding: 10px; /* Añade algo de espacio dentro del borde */
+    border-radius: 10px; /* Redondea las esquinas */
 }
 
 button {
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 8px 5px; /* Ajusta el tamaño de los botones */
+    margin: 8px 3px; /* Espacio entre los botones */
 }
+
+button:hover {
+    background-color: #ccc; /* Otras propiedades si deseas */
+}
+
+span {
+    margin: 0 10px; /* Espacio entre la cantidad y los botones */
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center; /* Centrar verticalmente el texto */
+    justify-content: center;
+    height: 40px; /* Ajustar la altura para que coincida con los botones */
+    border: 1px solid #ccc; /* Agregar borde alrededor */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 0 10px; /* Espaciado interno */
+}
+
+span {
+    margin: 0 10px; /* Separación entre la palabra y los botones */
+    font-size: 1em; /* Tamaño de la fuente */
+}
+
 
 .addToCartButton {
     background-color: #3498db;
@@ -68,43 +91,43 @@ button {
 .checkoutButton {
     background-color: #2ecc71;
     color: white;
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    display: block; /* Asegura que el botón se comporte como bloque para centrarlo */
 }
 
 .checkoutButton:hover {
     background-color: #27ae60;
 }
 
-/* Media query para pantallas de ancho máximo de 400px */
-@media (max-width: 400px) {
-    .ItemDetail {
-        padding: 20px 10px;
+/* Media query para pantallas de ancho máximo de 450px */
+@media (max-width: 450px) {
+    .ItemDetail button { /* Asegurándonos de que solo se afecten los botones de ItemDetail */
+        font-size: 0.8em !important; /* Reducir el tamaño de la fuente de los botones */
+        padding: 6px 12px !important; /* Reducir el tamaño de los botones */
     }
 
-    .buttonContainer {
-        flex-direction: column; /* Botones en columna */
-        align-items: center;    /* Centrar horizontalmente */
-        justify-content: center; /* Centrar verticalmente */
-        width: 15px;
-                    /* Ajustar automáticamente al contenido */
-        text-align: center;     /* Centrar texto dentro del contenedor */
-    }
-    
-    button {
-        font-size: 0.9em; /* Reducir el tamaño del texto */
-        padding: 8px 15px; /* Reducir el tamaño del botón */
-        margin-bottom: 10px; /* Separación entre botones */
-    }
-    .addToCartButton {
-        font-weight: 10px;
+    .ItemDetail .quantity-container {
+        height: 35px; /* Ajustar altura de los contenedores si es necesario */
     }
 
-    
-
-    .descripcion {
-        font-size: 1em; /* Reducir el tamaño del texto */
+    .ItemDetail .buttonContainer {
+        padding: 5px !important; /* Reducir el espaciado dentro del contenedor de botones */
     }
 
-    .cantidad-texto {
-        font-size: 0.9em; /* Reducir el texto de cantidad */
+    .ItemDetail .checkoutButton {
+        font-size: 0.9em !important; /* Reducir el tamaño de la fuente del botón de finalizar compra */
+    }
+
+    .ItemDetail .cantidad{
+        font-size: 0.75em !important; /* Reducir el tamaño de la palabra 'Cantidad' */
+        margin-right: 5px; /* Ajustar el margen para mejorar el espaciado */
+    }
+
+    .ItemDetail .quantity-container span {
+        margin-right: 3px !important; /* Reducir el espacio entre 'Cantidad' y el número */
     }
 }
+
+
+
+

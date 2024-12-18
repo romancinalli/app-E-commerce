@@ -129,7 +129,7 @@ ${carrito
           onChange={(e) => setDni(e.target.value)}
         />
 
-        <div>
+        <div className="metodoEntregaContainer">
           <h3>Selecciona cómo recibir tu pedido:</h3>
           <label>
             <input

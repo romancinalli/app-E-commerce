@@ -18,7 +18,7 @@ function ItemQuantitySelector({ onAdd }) {
     return (
         <div className='buttonContainer'>
             <button onClick={handleDecrement}>-</button>
-            <span>Cantidad {cantidad}</span>
+            <span className='cantidad'>Cantidad {cantidad}</span>
             <button  onClick={handleIncrement}>+</button>
             <button className='buttonDetail' onClick={() => onAdd(cantidad)}>Agregar al carrito</button>
             

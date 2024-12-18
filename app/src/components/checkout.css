@@ -31,7 +31,7 @@ li {
 }
 
 h3 {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     color: #666;
 }
 
@@ -55,15 +55,16 @@ h3 {
     margin: 20px 0 20px;
 }
 
+/* Estilo para los botones de Confirmar y Anular Compra */
 button {
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: rgb(184, 179, 174);
-    margin-bottom: 15px;
-}
+    margin-top: 20px; /* Mantiene el espacio superior */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centra los botones horizontalmente */
+    margin-bottom: 10px; /* Reduce el espacio entre los botones */
+    border-radius: 5px;
+  }
+  
 
 .confirmButton {
     background-color: #2ecc71;
@@ -85,3 +86,51 @@ button {
 .cancelButton:hover {
     background-color: #c0392b;
 }
+
+/* Centrado de la sección de los radios */
+.metodoEntregaContainer {
+    text-align: center; /* Centra el texto y los elementos dentro del contenedor */
+    margin-bottom: 15px; /* Agrega espacio abajo de los radios */
+  }
+  
+  /* Centrado de los radios */
+  .metodoEntregaContainer label {
+    margin-right: 15px; /* Espacio entre los dos radios */
+  }
+  
+  /* Estilo de los inputs de los radios */
+  .metodoEntregaContainer input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* Para los botones */
+  button {
+    margin-top: 10px; /* Espacio superior entre los botones y los radios */
+    display: flex; /* Asegura que los botones se muestren en bloque (uno debajo del otro) */
+    align-items: center;
+    justify-content: center;
+  }
+
+/* Media query para pantallas con ancho menor a 450px */
+@media (max-width: 450px) {
+    /* Contenedor de los radios */
+    .metodoEntregaContainer {
+      display: flex;
+      flex-direction: column; /* Apila los items verticalmente */
+      align-items: center; /* Centra los elementos horizontalmente */
+      justify-content: center; /* Asegura que se mantengan centrados verticalmente también */
+    }
+  
+    /* Estilo para las etiquetas de los radios */
+    .metodoEntregaContainer label {
+      text-align: center; /* Centra las leyendas */
+      margin-bottom: 10px; /* Añade un poco de espacio entre los radio buttons */
+    }
+  
+    /* Estilo para los inputs de los radios */
+    .metodoEntregaContainer input {
+      margin: 0; /* Elimina márgenes por defecto */
+    }
+  }
+  
+  
